@@ -13,7 +13,6 @@ const { NotImplementedError } = require("../lib");
  */
 function getSeason(date) {
 	let result = "";
-	console.log("input: " + date);
 	if (!date) {
 		return "Unable to determine the time of year!";
 	}
@@ -27,7 +26,6 @@ function getSeason(date) {
 		throw new Error("Invalid date!");
 	}
 	const month = date.getMonth();
-	console.log("month: " + month);
 
 	if (month >= 2 && month <= 4) {
 		result = "spring";
@@ -38,7 +36,6 @@ function getSeason(date) {
 	} else {
 		result = "winter";
 	}
-	console.log("result: " + result);
 	return result;
 }
 
